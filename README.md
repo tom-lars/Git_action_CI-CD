@@ -1,8 +1,6 @@
-Here is a human-readable `README.md` for your project based on the architecture you've described:
 
----
 
-```markdown
+
 # Basic Yii2 Application with Docker Swarm, Ansible, and GitHub Actions CI/CD
 
 This project demonstrates the deployment of a minimal Yii2 PHP web application using Docker Swarm on an Amazon Linux 2023 EC2 instance. It includes infrastructure automation with Ansible and a full CI/CD pipeline using GitHub Actions.
@@ -151,7 +149,7 @@ basic-yii2-app/
 ## License
 
 This project is provided for educational and testing purposes.
-```
+
 
 ---
 
