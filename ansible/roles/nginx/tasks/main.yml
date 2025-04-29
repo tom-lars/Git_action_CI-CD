@@ -1,18 +1,17 @@
 ---
 - name: Install NGINX
-  apt:
+  dnf:
     name: nginx
     state: present
 
-- name: Configure NGINX as reverse proxy for Yii2 app
-  template:
-    src: nginx/default.conf
-    dest: /etc/nginx/sites-available/default
-  notify:
-    - restart nginx
 
-- name: Ensure NGINX is running
+- name: Copy NGINX reverse proxy config
+  copy:
+    src: default.conf
+    dest: /etc/nginx/nginx.conf
+
+
+- name: restart nginx
   service:
     name: nginx
-    state: started
-    enabled: yes
+    state: restarted

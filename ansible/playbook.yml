@@ -2,11 +2,9 @@
 - name: Setup EC2 for Docker Swarm and Yii2 app
   hosts: all
   become: true
-  vars:
-    php_version: "8.1"
+  
   
   roles:
     - docker
     - nginx
-    - php
     - swarm
