@@ -27,7 +27,7 @@ jobs:
     - name: Build and tag Docker image
       run: |
         IMAGE_NAME="${{ secrets.DOCKERHUB_USERNAME }}/basic-yii2-app"
-        docker build -t $IMAGE_NAME:${{ steps.get_tag.outputs.next_tag }} -t $IMAGE_NAME:latest .
+        docker build -t $IMAGE_NAME:${{ steps.get_tag.outputs.next_tag }} -t $IMAGE_NAME:latest docker/Dockerfile
 
     - name: Push Docker images
       run: |
