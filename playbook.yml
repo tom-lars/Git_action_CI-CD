@@ -1,0 +1,5 @@
+- name: Deploy Yii2 Docker app with Nginx on EC2
+  hosts: ec2
+  become: yes
+  roles:
+    - yii2_deploy
