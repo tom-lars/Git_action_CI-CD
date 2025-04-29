@@ -1,0 +1,13 @@
+---
+- name: Initialize Docker Swarm
+  command: docker swarm init
+  when: ansible_facts['docker_swarm'] is not defined or ansible_facts['docker_swarm'] is none
+
+- name: Deploy the Yii2 app as a Docker Swarm service
+  docker_swarm_service:
+    name: yii2-app
+    image: your-dockerhub-username/yii2-app:latest
+    replicas: 1
+    published_ports:
+      - published: 80
+        target: 9000
