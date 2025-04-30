@@ -1,6 +1,5 @@
 
 
-
 # Basic Yii2 Application with Docker Swarm, Ansible, and GitHub Actions CI/CD
 
 This project demonstrates the deployment of a minimal Yii2 PHP web application using Docker Swarm on an Amazon Linux 2023 EC2 instance. It includes infrastructure automation with Ansible and a full CI/CD pipeline using GitHub Actions.
